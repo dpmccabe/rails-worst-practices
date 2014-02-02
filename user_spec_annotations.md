@@ -1,4 +1,4 @@
-4. Your descriptions should read like a sentence beginning with \"It\". If testing an actual instance method, use `#method_name` in your descriptions.
+4. Your descriptions should read like a sentence beginning with "It". If testing an actual instance method, use `#method_name` in your descriptions.
 5. Use factories when you need to build or create an actual object.
 6. This `expect` statement doesn't quite match the description. Ensure your description and assertion are the same.
 10. Again, factories.

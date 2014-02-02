@@ -1,4 +1,4 @@
-3. Configuration variables, API keys, and passwords belong in \".gitignore\"d configuration files.
+3. Configuration variables, API keys, and passwords belong in ".gitignore"d configuration files.
 5. Associated records generally need `dependent: :destroy` or other behavior defined in the event of a user's deletion or destruction.
 9. A single ActiveRecord callback is forgivable, but once you have multiple callbacks chained together, you should refactor your user creation process into its own class.
 11. These attributes need further validation of length, formatting, and character restrictions.
@@ -13,7 +13,7 @@
 41. First, use `=` for assignment and `==` for equality comparison. Second, `or` is a control flow operator and you want `||`, the logical operator. Finally, use an authorization library like CanCan instead of hard-coding these emails.
 44. This method does not relate to the User domain model, so it doesn't belong in the User class.
 45. Assignment of the local variable `result` is unnecessary if only used for the subsequent `if` statement.
-47. Favor a \"tell, don't ask\" architecture when thinking about control flow.
+47. Favor a "tell, don't ask" architecture when thinking about control flow.
 48. If a model's method is interacting with instances of several other models, it should be refactored into its own class for ease of testing with mocks/stubs.
 49. Your model shouldn't know or care about sending emails, which is yet another reason to extract this entire method.
 50. Using the explicit `return` is unnecessary unless you are trying to alter the method's control flow.
