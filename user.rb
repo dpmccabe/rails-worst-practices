@@ -33,8 +33,8 @@ class User < ActiveRecord::Base
     orders.any?
   end
 
-  def most_recent_package
-    order.last.package
+  def most_recent_package_shipping_address
+    order.last.package.shipping_address
   end
 
   def can_manage?

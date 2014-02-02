@@ -41,7 +41,7 @@ describe User do
       end
     end
 
-    it 'returns a orders and packages for a user' do
+    it 'returns orders and packages for a user' do
       expect(@user.orders.size).to eq(10)
       expect(@user.packages.size).to eq(10)
     end
