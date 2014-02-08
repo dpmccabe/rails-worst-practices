@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_many :orders
   has_many :packages, through: :orders
 
-  before_save :assign_referral_code
+  before_save :assign_referral_code, on: :create
   after_create :schedule_welcome_email
   
   validates_presence_of :email, :fname, :lname
