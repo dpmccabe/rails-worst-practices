@@ -5,10 +5,11 @@
 14. The interpolated date calculation is interpreted only once (when your app loads), not when `User.recently_created` is called. Wrap your chained scope parameters in a lambda.
 17. `self.attribute` is unnecessary except when assigning. Also, use `.join()` for string concatenation.
 21. This is purely presentational and belongs in a view helper. Also, use some other string delimiter if your string includes a bunch of double quotes.
-25. Here, `referral_code =` should be `self.referral_code =` since you want to assign a value to it. This code does not ensure uniqueness of the referral code as specified in the validations, either.
+25. Here, `referral_code =` should be `self.referral_code =` since you want to assign a value to it. This code does not ensure uniqueness of the referral code as specified in the validations, either.  It will also change the user's referral code every time the object is saved.
 28. Methods not relating to the User model as a domain model probably don't belong here.
 29. If you're using key-value storage like Redis for scheduled jobs, pass IDs of elements as your parameters, not entire elements.
 32. Instance methods that return true or false should end in `?` per convention.
+33. This should be orders.exists? since orders.any? will do a count on the table instead of just ensuring an object exists.
 37. This violates the Law of Demeter, in addition to being a completely silly method.
 41. First, use `=` for assignment and `==` for equality comparison. Second, `or` is a control flow operator and you want `||`, the logical operator. Finally, use an authorization library like CanCan instead of hard-coding these emails.
 44. This method does not relate to the User domain model, so it doesn't belong in the User class.
